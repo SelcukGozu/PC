@@ -3,7 +3,7 @@
 # ====================================================================
 
 # Kendi GitHub deponun temel Raw adresi (Sonundaki eğik çizgiye dikkat et)
-PC = "https://raw.githubusercontent.com/KullaniciAdin/pc-setup-hub/main/"
+$PC = "https://raw.githubusercontent.com/KullaniciAdin/pc-setup-hub/main/"
 
 function EkraniTemizle {
     Clear-Host
@@ -15,7 +15,7 @@ function EkraniTemizle {
 function ModulCalistir ($ModulYolu) {
     try {
         Write-Host "Modül indiriliyor... Lütfen bekleyin." -ForegroundColor DarkGray
-        $Kod = Invoke-RestMethod -Uri (PC + $ModulYolu)
+        $Kod = Invoke-RestMethod -Uri ($PC + $ModulYolu)
         Invoke-Expression $Kod
     } catch {
         Write-Host "Modül indirilirken bir hata oluştu! İnternet bağlantınızı veya GitHub linkini kontrol edin." -ForegroundColor Red
