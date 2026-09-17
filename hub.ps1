@@ -35,7 +35,7 @@ function AnaMenu {
         
         switch ($secim) {
             "1" { ModulCalistir "modules/yedekleme.ps1"; Write-Host "`nDevam etmek için Enter'a basın..."; Read-Host }
-            "2" { Write-Host "Ekran değiştirme modülü hazırlanıyor..."; Start-Sleep 2 }
+            "2" { ModulCalistir "modules/ekran.ps1"; Write-Host "`nDevam etmek için Enter'a basın..."; Read-Host }
             "3" { exit }
             default { Write-Host "Hatalı Seçim!" -ForegroundColor Red; Start-Sleep 1 }
         }
