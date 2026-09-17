@@ -2,7 +2,6 @@
 # OSMAN'S ULTIMATE PC SETUP & AUTOMATION HUB
 # ====================================================================
 
-# Kendi GitHub deponun temel Raw adresi (Sonundaki eğik çizgiye dikkat et)
 $PC = "https://raw.githubusercontent.com/SelcukGozu/PC/main/"
 
 function EkraniTemizle {
@@ -15,7 +14,7 @@ function EkraniTemizle {
 function ModulCalistir ($ModulYolu) {
     try {
         Write-Host "Modül indiriliyor... Lütfen bekleyin." -ForegroundColor DarkGray
-        $Kod = Invoke-RestMethod -Uri ($PC + $ModulYolu)
+        $Kod = Invoke-RestMethod -Uri ($PC +$ModulYolu)
         Invoke-Expression $Kod
     } catch {
         Write-Host "Modül indirilirken bir hata oluştu! İnternet bağlantınızı veya GitHub linkini kontrol edin." -ForegroundColor Red
@@ -27,7 +26,7 @@ function AnaMenu {
     while ($true) {
         EkraniTemizle
         Write-Host "[1] Otomatik Yedekleme Sistemi Kur (Oyunlar/Klasörler)"
-        Write-Host "[2] Ekran Değiştirme Otomasyonu (Yakında)"
+        Write-Host "[2] Ekran Değiştirme Otomasyonu (ControlMyMonitor)"
         Write-Host "[3] Çıkış"
         Write-Host "=====================================================" -ForegroundColor Cyan
         
