@@ -3,7 +3,7 @@
 # ====================================================================
 
 # Kendi GitHub deponun temel Raw adresi (Sonundaki eğik çizgiye dikkat et)
-$PC = "https://raw.githubusercontent.com/KullaniciAdin/pc-setup-hub/main/"
+$PC = "https://raw.githubusercontent.com/SelcukGozu/PC/main/"
 
 function EkraniTemizle {
     Clear-Host
